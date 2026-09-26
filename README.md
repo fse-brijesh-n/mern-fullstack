@@ -3,6 +3,129 @@
 
 Each subfolder listed below is a **React Vite project** (except where noted) that covers the specific concepts of that module. The projects are designed to be hands-on and incremental, building a strong foundation from prerequisites to full-stack development.
 
+## 🔀 Engineering Workflow & Git Collaboration (Company-Grade)
+
+> Every module's project MUST follow this professional workflow.
+
+### 1. Repository Setup (Fork & Clone)
+
+| Step | Command | Purpose |
+|------|---------|---------|
+| Fork | GitHub UI → "Fork" | Create personal copy |
+| Clone | `git clone git@github.com:<you>/fullstack-roadmap.git` | Copy to local |
+| Add upstream | `git remote add upstream git@github.com:org/fullstack-roadmap.git` | Track original |
+| Verify | `git remote -v` | Confirm remotes |
+| Sync main | `git fetch upstream && git checkout main && git merge upstream/main` | Stay updated |
+
+### 2. Branch Strategy
+
+| Branch | Naming Convention | Purpose |
+|--------|------------------|---------|
+| `main` | `main` | Production-ready, protected |
+| `develop` | `develop` | Integration branch |
+| Feature | `feature/JIRA-123-user-auth` | New features |
+| Bugfix | `bugfix/JIRA-456-login-error` | Non-critical fixes |
+| Hotfix | `hotfix/JIRA-789-prod-down` | Critical production |
+| Release | `release/v1.2.0` | Release preparation |
+| Chore | `chore/update-deps` | Maintenance |
+| Docs | `docs/api-readme` | Documentation |
+| Refactor | `refactor/service-layer` | Code cleanup |
+| Design | `design/figma-login-flow` | Design assets |
+
+### 3. Commit Conventions (Conventional Commits)
+
+| Type | Description | Example |
+|------|-------------|---------|
+| `feat` | New feature | `feat(auth): add JWT refresh token` |
+| `fix` | Bug fix | `fix(cart): resolve null pointer` |
+| `docs` | Documentation | `docs(readme): update setup steps` |
+| `style` | Formatting | `style: apply prettier` |
+| `refactor` | Code refactor | `refactor(user): extract mapper` |
+| `perf` | Performance | `perf(query): add index hint` |
+| `test` | Tests | `test(auth): add login tests` |
+| `build` | Build system | `build: bump spring boot to 3.3` |
+| `ci` | CI config | `ci: add sonar step` |
+| `chore` | Maintenance | `chore: update .gitignore` |
+| `revert` | Revert commit | `revert: feat(auth) ...` |
+| `design` | Design assets | `design: add login wireframes` |
+
+### 4. Code Review & Approval
+
+| Step | Actor | Action |
+|------|-------|--------|
+| 1 | Author | Open PR, assign reviewers |
+| 2 | CI | Run build, tests, lint, security scan |
+| 3 | Reviewer | Review code, comment, request changes |
+| 4 | Designer | Review UI/UX (if applicable) |
+| 5 | Author | Address feedback, push fixes |
+| 6 | Reviewer | Approve |
+| 7 | Maintainer | Merge |
+
+### 5. Review Rules
+
+| Rule | `main` | `develop` |
+|------|--------|-----------|
+| Require PR | ✅ | ✅ |
+| Required approvals | 2 | 1 |
+| Design approval | ✅ (UI) | ✅ (UI) |
+| Dismiss stale approvals | ✅ | ✅ |
+| Require status checks | ✅ | ✅ |
+| Require conversation resolution | ✅ | ✅ |
+| Require signed commits | ✅ | ❌ |
+| Require linear history | ✅ | ✅ |
+
+### 6. Merge Strategies
+
+| Strategy | When to Use | Command |
+|----------|-------------|---------|
+| Squash & Merge | Feature branches (default) | `gh pr merge --squash` |
+| Rebase & Merge | Linear history preferred | `gh pr merge --rebase` |
+| Merge Commit | Preserve history | `gh pr merge --merge` |
+
+### 7. Release & Versioning (SemVer)
+
+| Version | Meaning | Example |
+|---------|---------|---------|
+| MAJOR | Breaking change | `1.0.0 → 2.0.0` |
+| MINOR | New feature | `1.0.0 → 1.1.0` |
+| PATCH | Bug fix | `1.0.0 → 1.0.1` |
+
+---
+
+## 📚 Module 00 — Design Thinking & Figma
+
+| Sub-Module | Topics |
+|------------|--------|
+| 00-01 Design Thinking | Empathize, Define, Ideate, Prototype, Test, Double Diamond, Design Sprint |
+| 00-02 UX Research | User Interviews, Surveys, Personas, Empathy Maps, Journey Maps, User Stories |
+| 00-03 Information Architecture | Sitemaps, User Flows, Card Sorting, Navigation Patterns |
+| 00-04 Wireframing | Low-Fidelity, Mid-Fidelity, High-Fidelity, Sketching, Crazy 8s |
+| 00-05 Figma Fundamentals | Frames, Auto Layout, Constraints, Components, Variants, Styles |
+| 00-06 Figma Advanced | Design Tokens, Component Sets, Variables, Modes, Prototyping, Smart Animate |
+| 00-07 Design Systems | Atomic Design, Tokens, Component Library, Documentation, Storybook |
+| 00-08 Prototyping | Clickable Prototypes, Micro-interactions, Transitions, User Testing |
+| 00-09 Handoff | Dev Mode, Inspect, Zeplin, Specs, Redlines, Asset Export |
+| 00-10 Accessibility Design | Color Contrast (WCAG), Focus States, Touch Targets, Inclusive Design |
+| 00-11 Visual Design | Typography, Color Theory, Spacing, Grid Systems, Hierarchy |
+| 00-12 Design Critique | Heuristics (Nielsen), Feedback, Iteration, A/B Testing |
+
+**Project:** End-to-End Design of a SaaS Dashboard (Research → Wireframe → Hi-Fi → Prototype → Handoff)
+
+---
+
+## 📚 Module 01 — Internet & Web Fundamentals
+
+| Sub-Module | Topics |
+|------------|--------|
+| 01-01 How Internet Works | Client-Server, DNS, HTTP/HTTPS, HTTP/2, HTTP/3 (QUIC), TCP/IP, Request-Response, Status Codes, CDN basics |
+| 01-02 Web Browsers | Browser Architecture, Rendering Engine, V8, Browser Storage, DevTools, Lighthouse, Core Web Vitals |
+| 01-03 Web Security | HTTPS/TLS, CORS, CSP, XSS, CSRF, SQL Injection, Same-Origin, OWASP Top 10 |
+| 01-04 Web Protocols | REST, GraphQL, gRPC, WebSocket, SSE, WebRTC |
+| 01-05 Version Control | Git Internals, Branching, Merge vs Rebase, Cherry-pick, Bisect, Conventional Commits |
+| 01-06 Domain & Hosting | Domain Registrar, DNS Records, SSL/TLS Certificates, CDN, Reverse Proxy |
+
+**Project:** Personal Portfolio with Git Workflow (Fork → PR → Review → Merge)
+
 ---
 
 ## Module 00: Prerequisites · HTML · CSS · JavaScript · Projects  
@@ -443,6 +566,46 @@ Now Redux is broken into individual concepts, making it easier to learn step by 
 | `FS-06-validation-error-handling` | Input validation, error handling middleware. |
 | `FS-07-deployment-fullstack` | Deploying frontend and backend (e.g., Vercel + Render). |
 
+## 📚 Module 08 — Node.js
+
+| Sub-Module | Topics |
+|------------|--------|
+| 08-01 Fundamentals | Architecture, V8, Event Loop, Non-Blocking I/O, npm, package.json |
+| 08-02 Core Modules | fs, path, os, http, https, events, stream, crypto, buffer, worker_threads, child_process |
+| 08-03 Async | Callbacks, Promises, async/await, EventEmitter, Streams (Readable/Writable/Transform) |
+| 08-04 APIs | File System, HTTP Server, Env Vars, Process, Clustering, Signal Handling |
+| 08-05 Performance | Profiling, Diagnostics, Memory Leaks, perf_hooks |
+
+**Project:** CLI Tool & HTTP Server
+
+---
+
+## 📚 Module 09 — Express.js
+
+| Sub-Module | Topics |
+|------------|--------|
+| 09-01 Fundamentals | Setup, Routing, Middleware, Error Handling, Template Engines |
+| 09-02 REST | Methods, Status Codes, Content Negotiation, API Versioning |
+| 09-03 Architecture | MVC, Routes → Controllers → Services → Repositories, DTOs, Validation |
+| 09-04 Security | JWT, bcrypt, OAuth2, CORS, Helmet, Rate Limiting, Sanitization |
+| 09-05 Advanced | Multer, Nodemailer, Socket.io, Cron, Winston/Pino, Swagger |
+
+**Project:** Production REST API with Auth
+
+---
+
+## 📚 Module 10 — MongoDB
+
+| Sub-Module | Topics |
+|------------|--------|
+| 10-01 Fundamentals | NoSQL, Documents, Collections, BSON, Shell, CRUD |
+| 10-02 Querying | Operators, Projection, Sort, Pagination, Aggregation, Map-Reduce |
+| 10-03 Modeling | Embedded vs Referenced, Patterns, Relationships, Denormalization |
+| 10-04 Indexing | Types, Compound, Text, Geospatial, TTL, Explain |
+| 10-05 Mongoose | Schemas, Models, Validation, Middleware, Population, Virtuals |
+| 10-06 Advanced | ACID Transactions, Replica Sets, Sharding, Change Streams, Time Series |
+
+**Project:** E-Commerce Backend (Node + MongoDB)
 ---
 
 ## Final Cheat Sheet  
