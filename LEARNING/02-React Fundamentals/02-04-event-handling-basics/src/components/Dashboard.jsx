@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Dashboard = ({
-  
   name,
   setName,
   course,
@@ -31,9 +30,7 @@ const Dashboard = ({
   contact,
   setContact,
 }) => {
-
-  useEffect(() => {
-    <div></div>
+  const handleclick = () => {
     setName("Khushi");
     setCourse("MCA");
     setAge(22);
@@ -86,6 +83,7 @@ const Dashboard = ({
     setStudent({
       name: "Khushi",
       course: "MCA",
+      address: "Greater Noida",
       age: 22,
     });
 
@@ -99,42 +97,28 @@ const Dashboard = ({
       phone: "9876543210",
       email: "khushi@gmail.com",
     });
-
-  }, []);
+  };
 
   return (
     <>
-   
+      <button onClick={handleclick}>show all details</button>
       <h1>NAME: {name}</h1>
-
       <p>COURSE: {course}</p>
-
       <p>AGE: {age}</p>
-
       <p>MARKS: {marks}</p>
-
       <p>FEES: {fees}</p>
-
       <p>ACTIVE: {String(active)}</p>
-
       <p>INACTIVE: {String(inactive)}</p>
-
       <p>PASS: {String(pass)}</p>
-
       <p>FAIL: {String(fail)}</p>
-
-      <p>LISTOFSTUDENT: {listofstudent.length}</p>
-
-      <p>COURSES: {courses.join(", ")}</p>
-
+      <p>LIST OF STUDENTS: {listofstudent.length}</p>
+      <p>COURSES: {courses.join(",")}</p>
       <p>
-        STUDENT: {student.name}, {student.course}, {student.age}
+        STUDENT: {student.name},{student.address},{student.age}
       </p>
-
       <p>
-        ADDRESS: {address.city}, {address.state}, {address.pincode}
+        ADDRESS: {address.city}, {address.state} , {address.pincode}
       </p>
-
       <p>
         CONTACT: {contact.phone}, {contact.email}
       </p>

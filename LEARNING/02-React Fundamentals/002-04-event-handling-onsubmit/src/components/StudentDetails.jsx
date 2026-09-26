@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import Dashboard from "./Dashboard";
-
 const StudentDetails = () => {
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
@@ -11,14 +11,15 @@ const StudentDetails = () => {
   const [inactive, setInactive] = useState(false);
   const [pass, setPass] = useState(true);
   const [fail, setFail] = useState(false);
-
   const [listofstudent, setListOfStudent] = useState([]);
   const [courses, setCourses] = useState([]);
   const [student, setStudent] = useState({});
   const [address, setAddress] = useState({});
   const [contact, setContact] = useState({});
+
   return (
-    <>
+    <div>
+      <h1>Student Details</h1>
       <Dashboard
         name={name}
         setName={setName}
@@ -49,7 +50,7 @@ const StudentDetails = () => {
         contact={contact}
         setContact={setContact}
       />
-    </>
+    </div>
   );
 };
 
