@@ -15,7 +15,7 @@ const Parent = () => {
     setLocation(data.location);
     setCertificate(data.certificate);
   };
-
+  
   return (
     <div>
       <Child reciveddata={reciveddata} />
