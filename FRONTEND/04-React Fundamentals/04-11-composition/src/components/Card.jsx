@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({children}) => {
   return (
     <div>
-      <Card></Card>
+        <h1>student card</h1>
+      {children}
+
+     
     </div>
   )
 }
