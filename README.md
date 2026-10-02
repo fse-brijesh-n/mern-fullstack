@@ -194,6 +194,12 @@ This now includes the three historical/setup approaches at the top, ensuring lea
 | `04-10-fragments` | `React.Fragment`, shorthand `<>`, avoiding extra DOM nodes. |
 | `04-11-composition` | `props.children`, composition vs inheritance, slots pattern. |
 | `04-12-props-validation` | PropTypes, defaultProps, type checking for props. |
+| `04-13-form`                 | Handling forms in React, controlled and uncontrolled components, form state, input fields, `textarea`, `select`, checkbox, radio buttons, form submission, validation, and resetting forms.                                                                            |
+| `04-14-useEffect`            | Deep dive into the `useEffect` hook, side effects, dependency arrays, cleanup functions, effect execution, fetching data, and avoiding unnecessary effects.                                                                                                            |
+| `04-15-json`                 | Working with JSON data in React, JSON structure, `JSON.parse()`, `JSON.stringify()`, handling API JSON responses, transforming JSON data, and rendering JSON data in components.                                                                                       |
+| `04-16-mock-rest-backend`    | Working with jsonplaceholder.com, Working with mock REST APIs and simulated backends in React, creating mock endpoints, serving static JSON data, simulating GET/POST/PUT/DELETE requests, testing API integration without a real backend, and handling mock loading, success, and error responses.      |
+| `04-17-fetch-axios`          | Making API requests in React using the Fetch API and Axios, GET/POST/PUT/DELETE requests, request configuration, headers, handling responses, loading and error states, and integrating REST APIs with React components.                                               |
+| `04-18-styling-css-tailwind` | Styling React applications with CSS and Tailwind CSS, CSS fundamentals, selectors, box model, layout, Flexbox, Grid, responsive design, reusable styles, Tailwind utility classes, responsive utilities, states, component styling, and building responsive React UIs. |
 
 ---
 
