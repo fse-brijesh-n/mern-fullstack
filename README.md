@@ -91,6 +91,8 @@ Each subfolder listed below is a **React Vite project** (except where noted) tha
 | PATCH | Bug fix | `1.0.0 → 1.0.1` |
 
 ---
+# Frontend : React.js
+---
 
 ## 📚 Module 00 — Design Thinking & Figma
 
@@ -154,7 +156,7 @@ Each subfolder listed below is a **React Vite project** (except where noted) tha
 
 ---
 
-**Updated Module 03: React Setup**  
+## Module 03: React Setup  
 
 | Subfolder | Description |
 |-----------|-------------|
@@ -175,7 +177,7 @@ This now includes the three historical/setup approaches at the top, ensuring lea
 
 ---
 
-**Updated Module 04: React Fundamentals**  
+## Module 04: React Fundamentals  
 
 | Subfolder | Description |
 |-----------|-------------|
@@ -202,7 +204,7 @@ This structure now includes basic event handling before advanced prop-passing co
 
 ---
 
-**Updated Module 05: Events & DOM**  
+## Module 05: Events & DOM 
 *(Expanded with additional subfolders for deeper coverage)*
 
 | Subfolder | Description |
@@ -227,7 +229,7 @@ This expansion provides a more granular progression from basic event handling to
 
 ---
 
-**Updated Module 06: Components & Lifecycle**  
+## Module 06: Components & Lifecycle 
 *(Original topics plus added subfolders for class-based CRUD, functional lifecycle, and performance optimizations mimicking shouldComponentUpdate)*
 
 | Subfolder | Description |
@@ -253,7 +255,7 @@ This expanded module covers both class and functional component lifecycles, plus
 
 ---
 
-**Updated Module 07: Hooks (Real-World Focused)**  
+## Module 07: Hooks (Real-World Focused)
 *(Filtered to include only hooks that are commonly used in production React applications)*
 
 | Subfolder | Description |
@@ -299,7 +301,7 @@ This list focuses on hooks you will actually encounter and use in day-to-day Rea
 
 ---
 
-**Updated Module 08: Advanced State**  
+## Module 08: Advanced State  
 *(Renamed folder slugs and descriptions to be more meaningful, simple, and reflect real-world usage)*
 
 | Subfolder | Description |
@@ -354,7 +356,7 @@ Now every folder name clearly states its purpose, making it easier to understand
 
 ---
 
-**Updated Module 11: React Router**  
+## Module 11: React Router  
 *(Expanded with additional focused subfolders covering all key routing concepts)*
 
 | Subfolder | Description |
@@ -385,7 +387,7 @@ This comprehensive module now covers every fundamental and advanced React Router
 
 ---
 
-**Updated Module 12: Authentication & Authorization (Simplified)**  
+## Module 12: Authentication & Authorization (Simplified)  
 *(Rewritten with simple, clear folder names and descriptions for real-world use)*
 
 | Subfolder | Description |
@@ -404,7 +406,7 @@ This version uses plain language and focuses on what each part does in a typical
 
 ---
 
-**Updated Module 13: State Management**  
+## Module 13: State Management  
 *(Redux Basics and Redux Toolkit broken down into focused, real-world subfolders)*
 
 | Subfolder | Description |
@@ -445,106 +447,194 @@ Now Redux is broken into individual concepts, making it easier to learn step by 
 | `14-08-theming-dark-mode` | Theme context, CSS variables, dark mode toggle. |
 
 ---
-
+# Backend : Express.js
 ---
 
-## 📚 Module 15 — Node.js
+## 📚 Module 1 — Node.js
 
 | Sub-Module | Topics |
 |------------|--------|
-| 08-01 Fundamentals | Architecture, V8, Event Loop, Non-Blocking I/O, npm, package.json |
-| 08-02 Core Modules | fs, path, os, http, https, events, stream, crypto, buffer, worker_threads, child_process |
-| 08-03 Async | Callbacks, Promises, async/await, EventEmitter, Streams (Readable/Writable/Transform) |
-| 08-04 APIs | File System, HTTP Server, Env Vars, Process, Clustering, Signal Handling |
-| 08-05 Performance | Profiling, Diagnostics, Memory Leaks, perf_hooks |
+| 01-01 Fundamentals | Architecture, V8, Event Loop, Non-Blocking I/O, npm, package.json |
+| 01-02 Core Modules | fs, path, os, http, https, events, stream, crypto, buffer, worker_threads, child_process |
+| 01-03 Async | Callbacks, Promises, async/await, EventEmitter, Streams (Readable/Writable/Transform) |
+| 01-04 APIs | File System, HTTP Server, Env Vars, Process, Clustering, Signal Handling |
+| 01-05 Performance | Profiling, Diagnostics, Memory Leaks, perf_hooks |
 
 **Project:** CLI Tool & HTTP Server
 
 ---
-
----
-
-## 📚 Module 16 — Express.js
+## 📚 Module 2 — MongoDB
 
 | Sub-Module | Topics |
 |------------|--------|
-| 09-01 Fundamentals | Setup, Routing, Middleware, Error Handling, Template Engines |
-| 09-02 REST | Methods, Status Codes, Content Negotiation, API Versioning |
-| 09-03 Architecture | MVC, Routes → Controllers → Services → Repositories, DTOs, Validation |
-| 09-04 Security | JWT, bcrypt, OAuth2, CORS, Helmet, Rate Limiting, Sanitization |
-| 09-05 Advanced | Multer, Nodemailer, Socket.io, Cron, Winston/Pino, Swagger |
+| 02-01 Fundamentals | NoSQL, Documents, Collections, BSON, Shell, CRUD |
+| 02-02 Querying | Operators, Projection, Sort, Pagination, Aggregation, Map-Reduce |
+| 02-03 Modeling | Embedded vs Referenced, Patterns, Relationships, Denormalization |
+| 02-04 Indexing | Types, Compound, Text, Geospatial, TTL, Explain |
+| 02-05 Mongoose | Schemas, Models, Validation, Middleware, Population, Virtuals |
+| 02-06 Advanced | ACID Transactions, Replica Sets, Sharding, Change Streams, Time Series |
+
+**Project:** E-Commerce Backend (Node + MongoDB)
+---
+
+## 📚 Module 3 — Express.js
+
+> **3.1 → 3.9** are major phases.  
+> Each `03-xx` is a sub-module and can be built as a mini-project.  
+> Order follows dependency: each step depends on the previous one.  
+> Dependency IDs use phase-prefixed form: `3.1-03-01` = Module 3.1 / Sub-module 03-01.
+
+---
+
+### 📚 Module 3.1 Fundamentals & Setup
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 Setup | Setup → **Mini-project:** Hello Express API. Depends: Node/HTTP. |
+| 03-02 Routing | Routing → **Mini-project:** Route playground. Depends: 3.1-03-01. |
+| 03-03 Middleware | Middleware → **Mini-project:** Logger + request ID. Depends: 3.1-03-02. |
+| 03-04 Error Handling | Error Handling → **Mini-project:** 404/500 JSON handler. Depends: 3.1-03-03. |
+| 03-05 Template Engines | Template Engines → **Mini-project:** EJS/Handlebars page. Depends: 3.1-03-04. |
+| 03-06 Express Setup | Express server, routes, middleware, basic API → **Mini-project:** Basic Express server + health route. Depends: 3.1-03-01–3.1-03-05. |
+
+---
+
+### 📚 Module 3.2 REST API Design
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 REST Methods | Methods → **Mini-project:** Method explorer. Depends: 3.1-03-06. |
+| 03-02 Status Codes | Status Codes → **Mini-project:** Status code simulator. Depends: 3.2-03-01. |
+| 03-03 Content Negotiation | Content Negotiation → **Mini-project:** JSON/XML response. Depends: 3.2-03-02. |
+| 03-04 API Versioning | API Versioning → **Mini-project:** `/api/v1` vs `/api/v2`. Depends: 3.2-03-03. |
+
+---
+
+### 📚 Module 3.3 CRUD API
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 CRUD — Create | Create → **Mini-project:** POST endpoint. Depends: 3.2-03-01–3.2-03-04. |
+| 03-02 CRUD — Read | Read → **Mini-project:** GET list + GET by ID. Depends: 3.3-03-01. |
+| 03-03 CRUD — Update | Update → **Mini-project:** PUT/PATCH. Depends: 3.3-03-02. |
+| 03-04 CRUD — Delete | Delete → **Mini-project:** DELETE + 204. Depends: 3.3-03-03. |
+| 03-05 CRUD — Params/Body | Params/Body → **Mini-project:** Postman/Thunder tests. Depends: 3.3-03-04. |
+
+---
+
+### 📚 Module 3.4 Validation & Error Handling
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 Input Validation | Input Validation → **Mini-project:** Joi/Zod/express-validator schema. Depends: 3.3-03-05. |
+| 03-02 DTOs | DTOs → **Mini-project:** Request/response shaping. Depends: 3.4-03-01. |
+| 03-03 Sanitization | Sanitization → **Mini-project:** Clean user input. Depends: 3.4-03-02. |
+| 03-04 Central Error Middleware | Central Error Middleware → **Mini-project:** Unified error format. Depends: 3.4-03-03. |
+| 03-05 Async Errors | Async Errors → **Mini-project:** Async wrapper. Depends: 3.4-03-04. |
+
+---
+
+### 📚 Module 3.5 MongoDB & Mongoose
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 MongoDB Connection | Connection → **Mini-project:** MongoDB Atlas/local connect. Depends: 3.4-03-05. |
+| 03-02 Mongoose Schema | Schema → **Mini-project:** User/Note schema. Depends: 3.5-03-01. |
+| 03-03 Mongoose Models | Models → **Mini-project:** Mongoose model CRUD. Depends: 3.5-03-02. |
+| 03-04 Relationships | Relationships → **Mini-project:** Populate author/comments. Depends: 3.5-03-03. |
+| 03-05 Indexes | Indexes → **Mini-project:** Search/filter optimization. Depends: 3.5-03-04. |
+
+---
+
+### 📚 Module 3.6 Architecture
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 MVC | MVC → **Mini-project:** Split routes/controllers/views. Depends: 3.5-03-01–3.5-03-05. |
+| 03-02 Architecture Layers | Routes → Controllers → Services → Repositories → **Mini-project:** Layered refactor. Depends: 3.6-03-01. |
+| 03-03 Validation Layer | DTOs + Validation Layer → **Mini-project:** Schema + service validation. Depends: 3.6-03-02. |
+
+---
+
+### 📚 Module 3.7 Security & Auth
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 User Model | User Model → **Mini-project:** Register/login schema. Depends: 3.6-03-03. |
+| 03-02 bcrypt | bcrypt → **Mini-project:** Password hashing. Depends: 3.7-03-01. |
+| 03-03 JWT | JWT → **Mini-project:** Access/refresh tokens. Depends: 3.7-03-02. |
+| 03-04 Protected Routes | Protected Routes → **Mini-project:** Auth middleware. Depends: 3.7-03-03. |
+| 03-05 Roles | Roles → **Mini-project:** Admin/user guard. Depends: 3.7-03-04. |
+| 03-06 CORS | CORS → **Mini-project:** Cross-origin config. Depends: 3.7-03-05. |
+| 03-07 Helmet | Helmet → **Mini-project:** Security headers. Depends: 3.7-03-06. |
+| 03-08 Rate Limiting | Rate Limiting → **Mini-project:** Brute-force protection. Depends: 3.7-03-07. |
+| 03-09 OAuth2 | OAuth2 → **Mini-project:** Optional provider login. Depends: 3.7-03-08. |
+
+---
+
+### 📚 Module 3.8 File Upload
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 Multer | Multer → **Mini-project:** Single/multiple upload. Depends: 3.7-03-01–3.7-03-09. |
+| 03-02 Storage | Storage → **Mini-project:** Disk vs memory. Depends: 3.8-03-01. |
+| 03-03 File Validation | File Validation → **Mini-project:** Type/size limits. Depends: 3.8-03-02. |
+| 03-04 Static Serving | Static Serving → **Mini-project:** Serve uploaded files. Depends: 3.8-03-03. |
+| 03-05 Cloud Storage | Cloud Storage → **Mini-project:** Cloudinary/S3 optional. Depends: 3.8-03-04. |
+
+---
+
+### 📚 Module 3.9 Advanced Express
+
+| Sub-Module | Topics |
+|------------|--------|
+| 03-01 Nodemailer | Nodemailer → **Mini-project:** Welcome/reset email. Depends: 3.8-03-01–3.8-03-05. |
+| 03-02 Socket.io | Socket.io → **Mini-project:** Live notifications. Depends: 3.9-03-01. |
+| 03-03 Cron | Cron → **Mini-project:** Scheduled cleanup. Depends: 3.9-03-02. |
+| 03-04 Winston/Pino | Winston/Pino → **Mini-project:** Structured logging. Depends: 3.9-03-03. |
+| 03-05 Swagger | Swagger/OpenAPI → **Mini-project:** API docs. Depends: 3.9-03-04. |
+
+---
+
+## 📚 Module 4 Deployment Fullstack
+
+| Sub-Module | Topics |
+|------------|--------|
+| 04-01 Env Vars | Env Vars → **Mini-project:** Secrets/config. Depends: 3.9-03-01–3.9-03-05. |
+| 04-02 Backend Deploy | Backend Deploy → **Mini-project:** Render/Railway. Depends: 04-01. |
+| 04-03 Frontend Deploy | Frontend Deploy → **Mini-project:** Vercel/Netlify. Depends: 04-02. |
+| 04-04 MongoDB Atlas | MongoDB Atlas → **Mini-project:** Production DB. Depends: 04-03. |
+| 04-05 CORS/Cookies | CORS/Cookies → **Mini-project:** Production auth config. Depends: 04-04. |
+| 04-06 CI/CD | CI/CD → **Mini-project:** Auto deploy. Depends: 04-05. |
+| 04-07 Monitoring | Monitoring → **Mini-project:** Logs/health checks. Depends: 04-06. |
+
+---
+
+**Capstone**
+
+| Sub-Module | Topics |
+|------------|--------|
+| Capstone | **Project:** Production REST API with Auth — CRUD + MongoDB + JWT + validation + uploads + Swagger + deployment. Depends: All Module 3 + Module 4. |
 
 **Project:** Production REST API with Auth
 
 ---
 
----
-
-## 📚 Module 17 — MongoDB
-
-| Sub-Module | Topics |
-|------------|--------|
-| 10-01 Fundamentals | NoSQL, Documents, Collections, BSON, Shell, CRUD |
-| 10-02 Querying | Operators, Projection, Sort, Pagination, Aggregation, Map-Reduce |
-| 10-03 Modeling | Embedded vs Referenced, Patterns, Relationships, Denormalization |
-| 10-04 Indexing | Types, Compound, Text, Geospatial, TTL, Explain |
-| 10-05 Mongoose | Schemas, Models, Validation, Middleware, Population, Virtuals |
-| 10-06 Advanced | ACID Transactions, Replica Sets, Sharding, Change Streams, Time Series |
-
-**Project:** E-Commerce Backend (Node + MongoDB)
----
-
----
-
-## Full-Stack Add-On: Express & MongoDB  
-*(Each subfolder is a full-stack project with a React Vite frontend and an Express/MongoDB backend.)*
-
-| Subfolder | Description |
-|-----------|-------------|
-| `FS-01-express-setup` | Express server, routes, middleware, basic API. |
-| `FS-02-rest-api-crud` | Building a RESTful API with CRUD operations. |
-| `FS-03-mongodb-mongoose` | MongoDB connection, Mongoose models, schema. |
-| `FS-04-auth-jwt` | JWT authentication, protected routes, user model. |
-| `FS-05-file-upload` | File upload with Multer, storing files. |
-| `FS-06-validation-error-handling` | Input validation, error handling middleware. |
-| `FS-07-deployment-fullstack` | Deploying frontend and backend (e.g., Vercel + Render). |
-
----
-
-## Module 19: Deployment
-
-| Subfolder | Description |
-|-----------|-------------|
-| `19-01-build-optimization` | `npm run build`, analyzing bundle, environment variables. |
-| `19-02-environment-variables` | `.env`, Vite env variables, mode-specific. |
-| `19-03-deploy-vercel` | Deploying to Vercel. |
-| `19-04-deploy-netlify` | Deploying to Netlify. |
-| `19-05-deploy-aws` | S3 + CloudFront deployment. |
-| `19-06-docker` | Containerizing React app with Docker. |
-| `19-07-ci-cd` | GitHub Actions for CI/CD. |
-| `19-08-ssr-deployment` | Deploying SSR apps (Next.js) on Vercel/Node. |
-
----
-
----
-
-## Module 20: Projects  
+## Module Projects  
 *(Each is a larger, full-featured React Vite project integrating all previous concepts.)*
 
 | Subfolder | Description |
 |-----------|-------------|
-| `20-01-ecommerce-app` | Product listing, cart, checkout, auth, API integration. |
-| `20-02-social-media-dashboard` | User feed, posts, likes, comments, profiles. |
-| `20-03-task-management-app` | Kanban board, drag-and-drop, CRUD. |
-| `20-04-chat-application` | Real-time chat, WebSockets, rooms. |
-| `20-05-blog-platform` | Blog posts, Markdown, comments, admin panel. |
-| `20-06-portfolio-website` | Portfolio with animations, contact form. |
-| `20-07-admin-dashboard` | Data visualization, charts, tables. |
-| `20-08-video-streaming-app` | Video list, player, comments (YouTube clone). |
-| `20-09-food-delivery-app` | Menu, cart, order tracking. |
-| `20-10-real-estate-listing` | Listings, maps, filters. |
-
----
+| `01-ecommerce-app` | Product listing, cart, checkout, auth, API integration. |
+| `02-social-media-dashboard` | User feed, posts, likes, comments, profiles. |
+| `03-task-management-app` | Kanban board, drag-and-drop, CRUD. |
+| `04-chat-application` | Real-time chat, WebSockets, rooms. |
+| `05-blog-platform` | Blog posts, Markdown, comments, admin panel. |
+| `06-portfolio-website` | Portfolio with animations, contact form. |
+| `07-admin-dashboard` | Data visualization, charts, tables. |
+| `08-video-streaming-app` | Video list, player, comments (YouTube clone). |
+| `09-food-delivery-app` | Menu, cart, order tracking. |
+| `10-real-estate-listing` | Listings, maps, filters. |
 
 ---
 
@@ -566,3 +656,7 @@ This structure ensures **no topic is missed** and provides a hands-on project fo
 ---
 
 ---
+```
+Designed by
+Mr.Brijesh Nishad (Full Stack Engineer)
+```
