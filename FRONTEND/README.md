@@ -1,4 +1,4 @@
-# Complete React & Full-Stack Development Handbook  
+# Complete Frontend Development Handbook  
 **Detailed Table of Contents with Subfolder Projects**
 
 Each subfolder listed below is a **React Vite project** (except where noted) that covers the specific concepts of that module. The projects are designed to be hands-on and incremental, building a strong foundation from prerequisites to full-stack development.
