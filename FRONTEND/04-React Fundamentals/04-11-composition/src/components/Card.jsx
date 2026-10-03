@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({children}) => {
   return (
     <div>
-        <h1>student card</h1>
+        <h1>Student Card</h1>
       {children}
 
      
